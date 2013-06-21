@@ -3,7 +3,7 @@
 
   "name": "Base64 string to Image converter",
   "description": "This extension can convert base64 string to image.",
-  "version": "0.2",
+  "version": "0.21",
 
   "permissions": [
    

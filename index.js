@@ -6,4 +6,5 @@ function convert(){
 	var text = document.getElementById('inputData').value;
 	var image = document.getElementById('placeHolder');
 	placeHolder.src = "data:image/png;base64,"+text;
+	placeHolder.classList.add("placeholder-border");
 }
