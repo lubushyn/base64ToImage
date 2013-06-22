@@ -1,16 +1,71 @@
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+	<style>
+	body {
+		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	}
+	</style>
+	<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+	<script src="jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="index.js"></script>
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
-	<body>
-	<div><textarea id="inputData" type="text" cols="35" rows="20" placeholder="Enter base64 image string here"></textarea></div>
-<div>
-	<a id="convertBtn" href="#" class="btn center"><center>Convert to image</center></a>
-</div>
-<div style="">
-	<img id="placeHolder" alt="" style="max-width:300px; max-height:300px"/>
-</div>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#">Base 64 To image converter</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
 
-	</body>
+	<div class="container">
+			<textarea id="inputData" type="text" placeholder="Enter base64 image string here">
+			</textarea>
+			<p>
+				<div class="span6 pagination-centered">
+			<button id="convertBtn" class="btn btn-primary btn-large">
+				Convert to image
+			</button>
+		</div>
+		</p>
+		</div>
+		<div class="span6 pagination-centered">
+			<img id="placeHolder" alt="" style="max-width:300px; max-height:300px"/>
+		</div>
+		</div>
+	</div>
+
+	<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+ 
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+</body>
 </html>
